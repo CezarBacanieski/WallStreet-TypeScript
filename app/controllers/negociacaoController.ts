@@ -5,7 +5,7 @@ export class NegociacaoController {
   private inputQuantidade: HTMLInputElement;
   private inputValor: HTMLInputElement;
 
-  constructor(data: Date, quantidade: number, valor: number) {
+  constructor() {
     this.inputData = document.querySelector('#data');
     this.inputQuantidade = document.querySelector('#quantidade');
     this.inputValor = document.querySelector('#valor');
@@ -13,6 +13,8 @@ export class NegociacaoController {
 
   adiciona(): void {
     const negociacao = this.criaNegociacao();
+    console.log(negociacao);
+    this.limparFormulario();
   }
 
   criaNegociacao(): Negociacao {
@@ -21,5 +23,12 @@ export class NegociacaoController {
     const quantidade = parseInt(this.inputQuantidade.value);
     const valor = parseFloat(this.inputValor.value);
     return new Negociacao(date, quantidade, valor);
+  }
+
+  limparFormulario(): void {
+    this.inputData.value = '';
+    this.inputQuantidade.value = '';
+    this.inputValor.value = '';
+    this.inputData.focus();
   }
 }
