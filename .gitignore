@@ -1,6 +1,15 @@
-node_modules
-.tsbuildinfo
+# Diretório de dependências do Node.js
+node_modules/
+
+# Diretórios de saída de compilação
 dist/
 build/
 out/
-lib/
+
+# Arquivo de cache do TypeScript
+*.tsbuildinfo
+
+# Cache de ferramentas de build
+.cache/
+.parcel-cache/
+
