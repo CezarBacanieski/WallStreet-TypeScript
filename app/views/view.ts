@@ -1,8 +1,11 @@
 export abstract class View<T> {
   private escapar = false;
   protected elemento: HTMLElement;
-  constructor(seletor: string, escapar: boolean) {
+  constructor(seletor: string, escapar?: boolean) {
     this.elemento = document.querySelector(seletor);
+    if (escapar) {
+      this.escapar = escapar;
+    }
   }
 
   public update(model: T): void {
