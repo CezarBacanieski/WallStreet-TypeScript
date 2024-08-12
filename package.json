@@ -1,11 +1,11 @@
 {
-  "name": "learning--ts",
+  "name": "alurabank",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "lite-server --baseDir=dist",
+    "server": "lite-server --baseDir=app",
     "start": "concurrently \"npm run watch\" \"npm run server\"",
     "compile": "tsc",
     "watch": "tsc -w"
@@ -13,15 +13,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@eslint/js": "^9.9.0",
-    "@typescript-eslint/eslint-plugin": "^8.0.1",
-    "@typescript-eslint/parser": "^8.0.1",
     "concurrently": "^6.0.0",
-    "eslint": "^9.9.0",
-    "globals": "^15.9.0",
     "lite-server": "^2.6.1",
-    "prettier": "3.3.3",
-    "typescript": "^5.5.4",
-    "typescript-eslint": "^8.0.1"
+    "typescript": "^4.2.2"
   }
 }
