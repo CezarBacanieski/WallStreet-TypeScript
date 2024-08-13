@@ -1,11 +1,11 @@
 import { domInjector } from '../decorators/dom-injector.js';
 import { logarTempoDeExecucao } from '../decorators/logar-tempo-de-execucao.js';
 import { DiasDaSemana } from '../enums/dias-da-semana.js';
+import { NegociacoesDoDia } from '../interfaces/negociacao-do-dia.js';
 import { Negociacao } from '../models/negociacao.js';
 import { Negociacoes } from '../models/negociacoes.js';
 import { MensagemView } from '../views/mensagem-view.js';
 import { NegociacoesView } from '../views/negociacoes-view.js';
-
 export class NegociacaoController {
   @domInjector('#data')
   private inputData: HTMLInputElement;
@@ -42,12 +42,12 @@ export class NegociacaoController {
   public importaDados(): void {
     fetch('http://localhost:8080/dados')
       .then((res) => res.json())
-      .then((dados: any[]) => {
+      .then((dados: NegociacoesDoDia[]) => {
         return dados.map((dadoDeHoje) => {
           return new Negociacao(
             new Date(),
-            dadoDeHoje.vezes,
-            dadoDeHoje.montante
+            dadoDeHoje.montante,
+            dadoDeHoje.vezes
           );
         });
       })
