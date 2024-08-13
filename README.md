@@ -2,7 +2,14 @@
 
 Bem-vindo ao projeto de criação de uma página de negociação na bolsa de valores. Este projeto foi desenvolvido com o objetivo de aprender e demonstrar as capacidades do **TypeScript** na construção de aplicações web robustas e escaláveis.
 
-![Screenshot da Página de Negociação](./screenshot.png)
+![Screenshot da Página de Negociação](./app/src/assets/image.png)
+
+## Funcionalidades
+
+- **Operações Restritas a Dias Úteis:** As operações de compra e venda só podem ser realizadas em dias úteis, respeitando o horário de funcionamento do mercado.
+- **Monitoramento de Desempenho:** O sistema monitora o tempo de execução de cada função, garantindo que a aplicação permaneça rápida e responsiva.
+- **Interface Intuitiva:** Design limpo e amigável para facilitar a navegação.
+
 
 ## Por que TypeScript?
 
